@@ -1,0 +1,17 @@
+<span>
+        <p>
+                <% flash.each do |message_type, message| %>
+                        <%= message %>
+                <% end %>
+        </p>
+</span>
+
+
+<main>
+        <div class="show">
+                <div><strong>Title:</strong> <%= @book.title %></div></%>
+                <div><strong>Body:</strong> <%= @book.body %></div>
+                <%= link_to 'Edit', "/books/#{@book.id}/edit" %> |<%= link_to 'Back', "/books" %>
+        </div>
+
+</main>
